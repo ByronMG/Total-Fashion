@@ -14,7 +14,7 @@ function filtrar(){
     
     var elementosFiltrados = [];
     for (var i = 0; i < elementos.length; i++) {
-        if (expresionRegular.test(elementos[i].children[1].textContent)) {
+        if (expresionRegular.test(elementos[i].children[1].children[0].textContent)) {
         elementosFiltrados.push(elementos[i]);
         // console.log(elementos[i].children[1].textContent);
     }
