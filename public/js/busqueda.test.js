@@ -1,8 +1,11 @@
 let elementos
 let count = 1
 
-function filtrar() {
+function filtrar(){
     if (count == 1){
+        elementos = document.querySelectorAll(".producto")
+        count++
+    }
     // Obtener el texto de la barra de búsqueda
     var textoBusqueda = document.getElementById("input-search").value;
     // Crear una expresión regular para buscar el texto
@@ -26,12 +29,10 @@ function filtrar() {
             resultados.appendChild(elementosFiltrados[i]);
         }
     } else {
-        resultados.innerHTML = `<br><h4 style='margin-left:20px'>No se encontraron registros coincidentes.</h4>`;
+        resultados.innerHTML =  "<h4 style='margin-left:20px'>No se encontraron registros coincidentes.</h4>";
     }
 }
 
 function update_items() {
-        elementos = document.querySelectorAll(".producto")
-        count++
-    }
+    count = 1
 }
